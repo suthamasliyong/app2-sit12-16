@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('หน้าแรก'),
+        title: const Text('my_social_profile'),
       ),
       body: Column(
         children:[
@@ -30,19 +30,16 @@ class HomePage extends StatelessWidget {
             children: [
               ClipOval(
                 child: Image.asset("assets/pic.jpg",
-                  width: 200,
-                  height: 200,
+                  width: 80,
+                  height: 80,
                   fit: BoxFit.cover,
                 ),
               ),
-              ClipOval(
-                child: Image.asset("assets/pic.jpg",
-                  width: 200,
-                  height: 200,
-                  fit: BoxFit.cover,
-                ),
-              ),
-
+            ],
+          ),
+          Row(
+            children: [
+              Text("Suthamas Liyong"),
             ],
           ),
           Row(
