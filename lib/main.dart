@@ -37,9 +37,10 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          Row(
+          Column(
             children: [
               Text("Suthamas Liyong"),
+              Text("นักศึกษาสาคาเทคโนโลยีสารสนเทศ")
             ],
           ),
           Row(
