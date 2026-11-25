@@ -32,90 +32,93 @@ class HomePage extends StatelessWidget {
           Icon(Icons.menu)
         ],
       ),
-      body: Column(
-        children:[
-          Row(
-            children: [
-              ClipOval(
-                child: Image.asset("assets/pic.jpg",
-                  width: 100,
-                  height: 100,
-                  fit: BoxFit.cover,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                SizedBox(
+                    width: 15
                 ),
-              ),
-              SizedBox(
-                width: 55,
-                height: 100,
-              ),
-              Text("1",
-                style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w800
+                ClipOval(
+                  child: Image.asset("assets/pic.jpg",
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-              SizedBox(
-                width: 55,
-                height: 100,
-              ),
-              Text("67",
-                style: TextStyle(
-                    fontSize: 24,
-                  fontWeight: FontWeight.w800
-                ),
-              ),
-              SizedBox(
-                width: 55,
-                height: 100,
-              ),
-              Text("99",
-                style: TextStyle(
-                fontSize: 24,
-                    fontWeight: FontWeight.w800
-              ),
-              ),
-              Expanded(child:
-              Column(
+                SizedBox(width: 25),
+                Column(
                   children: [
-                    Text("99")
-                  ]
-              ),
-              ),
-            ],
-          ),
-          Column(
-            children: [
-              Text("Suthamas Liyong"),
-              Text("นักศึกษาสาคาเทคโนโลยีสารสนเทศ")
-            ],
-          ),
-          Row(
-            children: [
-              Expanded(child: ElevatedButton(onPressed: () => {} ,
+                    Text("1",
+                        style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w600)),
+                    Text("โพสต์")],
+                ),
+                SizedBox(width: 25),
+                Column(
+                  children: [
+                    Text("67",
+                        style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w600)),
+                    Text("ผู้ติดตาม")],
+                ),
+                SizedBox(width: 25),
+                Column(
+                  children: [
+                    Text("99",
+                        style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w600)),
+                    Text("กำลังติดตาม")],
+                ),
+              ],
+            ),
+            SizedBox(height: 15),
+            const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Suthamas Liyong",style: TextStyle(fontWeight: FontWeight.bold),),
+                SizedBox(height: 4),
+                Text("นักศึกษาสาคาเทคโนโลยีสารสนเทศ"),
+                Text("LOL")
+              ],
+            ),
+            SizedBox(width: 8,height: 8,),
+            Row(
+              children: [
+                Expanded(child: ElevatedButton(onPressed: () => {} ,
                   child: Text("ติดตาม"),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                    foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadiusGeometry.circular(25)
-                    )
+                      backgroundColor: Colors.blue,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadiusGeometry.circular(10)
+                      )
                   ),
-              )
-              ),
-              SizedBox(
-                width: 20,
-                height: 100,
-              ),
-              Expanded(
-                  child: OutlinedButton(
+                )
+                ),
+                SizedBox(width: 35,height: 35),
+                Expanded(
+                    child: OutlinedButton(
                       onPressed: () => {},
                       child: Text("ข้อความ"),
-                    style: OutlinedButton.styleFrom(
-                      backgroundColor: Colors.white
-                    ),
+                      style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadiusGeometry.circular(10)
+                      ),
+                    )
                   )
-              )
-            ],
-          )
-        ]
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                Row(
+                  children: [
+
+                  ],
+                )
+              ],
+            )
+              ]
+            )
         ),
     );
   }
